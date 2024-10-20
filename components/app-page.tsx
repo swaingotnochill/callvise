@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { PhoneCall, Users, Bot, BarChart, CheckCircle, ArrowRight } from 'lucide-react'
+import { PhoneCall, Users, Bot, BarChart, CheckCircle } from 'lucide-react'
 
 export function Page() {
   return (
@@ -95,7 +95,7 @@ export function Page() {
                   {
                     name: "Michael Chen",
                     role: "Small Business Owner",
-                    quote: "The insights provided by AI Vise have given me unprecedented understanding of my work patterns. It's been a game-changer for my time management."
+                    quote: "The insights provided by AI Vise have given me unprecedented understanding of my work patterns. It&apos;s been a game-changer for my time management."
                   }
                 ].map((testimonial) => (
                   <div key={testimonial.name} className="relative">
@@ -106,7 +106,7 @@ export function Page() {
                       <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{testimonial.name}</p>
                     </dt>
                     <dd className="mt-2 ml-16 text-base text-gray-500">
-                      "{testimonial.quote}"
+                      &ldquo;{testimonial.quote}&rdquo;
                       <p className="mt-2 text-sm text-gray-400">{testimonial.role}</p>
                     </dd>
                   </div>
