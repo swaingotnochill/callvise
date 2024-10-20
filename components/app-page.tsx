@@ -13,11 +13,12 @@ export function Page() {
             <PhoneCall className="h-8 w-8 text-blue-600" />
             <span className="ml-2 text-2xl font-bold text-gray-900">Call Vise</span>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex items-center space-x-4">
             <Link href="/features" className="text-gray-500 hover:text-gray-900">Features</Link>
-            <Link href="/pricing" className="text-gray-500 hover:text-gray-900">Pricing</Link>
             <Link href="/contact" className="text-gray-500 hover:text-gray-900">Contact</Link>
-            <Link href="/auth/login" className="text-blue-600 hover:text-blue-800 font-medium">Login</Link>
+            <Button size="sm" variant="default" className="bg-gray-900 hover:bg-gray-700 text-white" asChild>
+              <Link href="/auth/login">Login</Link>
+            </Button>
           </div>
         </nav>
       </header>
@@ -27,10 +28,10 @@ export function Page() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl">
-                Revolutionize Your Call Center
+                Your Personal AI Assistant
               </h1>
               <p className="mt-3 max-w-md mx-auto text-xl sm:text-2xl md:mt-5 md:max-w-3xl">
-                Boost productivity and customer satisfaction with AI-powered call management
+                Boost productivity and simplify your life with AI-powered task management
               </p>
               <div className="mt-10 flex justify-center">
                 <Button size="lg" asChild>
@@ -48,28 +49,28 @@ export function Page() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                Why Choose Call Vise?
+                Why Choose AI Vise?
               </h2>
               <p className="mt-4 text-xl text-gray-600">
-                Empower your team with cutting-edge call center technology
+                Empower yourself with cutting-edge AI technology
               </p>
             </div>
 
             <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               <FeatureCard
                 icon={<Users className="h-8 w-8 text-blue-600" />}
-                title="Smart Contact Management"
-                description="Efficiently organize and manage your contacts with our intuitive system."
+                title="Smart Task Management"
+                description="Efficiently organize and manage your tasks with our intuitive system."
               />
               <FeatureCard
                 icon={<Bot className="h-8 w-8 text-blue-600" />}
-                title="AI-Powered Assistants"
-                description="Leverage AI to handle routine inquiries and boost your team's productivity."
+                title="AI-Powered Assistance"
+                description="Leverage AI to handle routine tasks and boost your productivity."
               />
               <FeatureCard
                 icon={<BarChart className="h-8 w-8 text-blue-600" />}
-                title="Advanced Analytics"
-                description="Gain valuable insights with our comprehensive reporting and analytics tools."
+                title="Personal Analytics"
+                description="Gain valuable insights into your productivity with comprehensive reporting tools."
               />
             </div>
           </div>
@@ -80,7 +81,7 @@ export function Page() {
             <div className="lg:text-center">
               <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Testimonials</h2>
               <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Trusted by Industry Leaders
+                Loved by Users Everywhere
               </p>
             </div>
             <div className="mt-10">
@@ -88,15 +89,13 @@ export function Page() {
                 {[
                   {
                     name: "Sarah Thompson",
-                    role: "Call Center Manager",
-                    company: "TechCorp Inc.",
-                    quote: "Call Vise has transformed our call center operations. The AI assistants have significantly reduced our response times and improved customer satisfaction."
+                    role: "Freelance Designer",
+                    quote: "AI Vise has transformed my workflow. The AI assistant has significantly reduced my task management time and improved my productivity."
                   },
                   {
                     name: "Michael Chen",
-                    role: "Customer Service Director",
-                    company: "Global Solutions Ltd.",
-                    quote: "The analytics provided by Call Vise have given us unprecedented insights into our customer interactions. It's been a game-changer for our strategic planning."
+                    role: "Small Business Owner",
+                    quote: "The insights provided by AI Vise have given me unprecedented understanding of my work patterns. It's been a game-changer for my time management."
                   }
                 ].map((testimonial) => (
                   <div key={testimonial.name} className="relative">
@@ -108,7 +107,7 @@ export function Page() {
                     </dt>
                     <dd className="mt-2 ml-16 text-base text-gray-500">
                       "{testimonial.quote}"
-                      <p className="mt-2 text-sm text-gray-400">{testimonial.role} at {testimonial.company}</p>
+                      <p className="mt-2 text-sm text-gray-400">{testimonial.role}</p>
                     </dd>
                   </div>
                 ))}
@@ -121,18 +120,18 @@ export function Page() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-                Ready to transform your call center?
+                Ready to transform your productivity?
               </h2>
               <p className="mt-4 text-xl text-blue-100">
-                Join thousands of satisfied customers who have revolutionized their operations with Call Vise
+                Join thousands of satisfied users who have revolutionized their daily lives with AI Vise
               </p>
               <div className="mt-8 flex justify-center">
                 <Button size="lg" variant="secondary" asChild>
                   <Link href="/auth/login">Start Your Free Trial</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="ml-4 text-white border-white hover:bg-blue-700" asChild>
+                {/* <Button size="lg" variant="outline" className="ml-4 text-white border-white hover:bg-blue-700" asChild>
                   <Link href="/pricing">View Pricing <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -146,7 +145,7 @@ export function Page() {
               <h3 className="text-sm font-semibold uppercase tracking-wider">Product</h3>
               <ul className="mt-4 space-y-2">
                 <li><Link href="/features" className="text-gray-300 hover:text-white">Features</Link></li>
-                <li><Link href="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
+                {/* <li><Link href="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li> */}
                 <li><Link href="/demo" className="text-gray-300 hover:text-white">Request Demo</Link></li>
               </ul>
             </div>
@@ -154,11 +153,11 @@ export function Page() {
               <h3 className="text-sm font-semibold uppercase tracking-wider">Company</h3>
               <ul className="mt-4 space-y-2">
                 <li><Link href="/about" className="text-gray-300 hover:text-white">About Us</Link></li>
-                <li><Link href="/careers" className="text-gray-300 hover:text-white">Careers</Link></li>
+                {/* <li><Link href="/careers" className="text-gray-300 hover:text-white">Careers</Link></li> */}
                 <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
               </ul>
             </div>
-            <div>
+            {/* <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider">Resources</h3>
               <ul className="mt-4 space-y-2">
                 <li><Link href="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
@@ -172,7 +171,7 @@ export function Page() {
                 <li><Link href="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="mt-8 border-t border-gray-700 pt-8 flex items-center justify-between">
             <p className="text-gray-400">&copy; 2024 Call Vise. All rights reserved.</p>
